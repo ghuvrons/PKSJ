@@ -31,8 +31,7 @@ SSH sebagai tool untuk melakukan konektivitas pada jaringan. Jika anda menggunak
 
 ### Software Ncrack
 
-Software Ncrack adalah ...
-
+Ncrack adalah alat otentikasi jaringan kecepatan tinggi. Dibuat untuk membantu perusahaan mengamankan jaringan mereka secara proaktif dengan menguji semua host dan perangkat untuk password yang kurang bagus. Keamanan juga bergantung pada Ncrack ketika mengaudit klien mereka. Ncrack dirancang menggunakan pendekatan modular, sintaks baris perintah mirip dengan Nmap dan mesin dinamis yang dapat beradaptasi berdasarkan feedback jaringan. Hal ini memungkinkan kecepatan tinggi, juga audit skala besar dari beberapa host.
 
 ## Uji Penetrasi 1
 
