@@ -96,8 +96,18 @@ Ncrack finished.
 
 ### Konfigurasi sofware Fail2ban
 
-* -
-* -
+* Pertama intall fail2ban di os ubuntu server
+
+```
+~$ sudo apt-get install fail2ban
+```
+
+* Tunggu sampai proses download dan instalisasi selesai
+* Kemudian jalankan *fail2ban*
+
+```
+~$ sudo systemctl start fail2ban.service
+```
 
 ### Konfigurasi openSSH
 
