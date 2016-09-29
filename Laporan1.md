@@ -141,4 +141,4 @@ Ncrack finished.
 
 ## Kesimpulan dan Saran
 
--
+Dari uji penetrasi yang pertama dan kedua, dapat ditarik kesimpulan bahwa kita perlu menambah software untuk SSH brute force countermeasure salah satunya adalah fail2ban. Selain itu kita juga mengkonfigurasi SSH agar tidak default. Supaya susah untuk diserang.
