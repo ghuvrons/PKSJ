@@ -139,6 +139,60 @@ Ncrack finished.
 
 * dari penetrasi di atas tidak terlihat password seperti penetrasi yang sebelumnya.
 
+## Medusa sebagai alternatif dari Ncrack
+
+Dalam Kali Linux sudah terdapat Medusa yang terpasang sehingga tidak dibutuhkan adanya konfigurasi khusus.
+
+### Uji Penetrasi Medusa
+
+* Untuk melakukan uji penetrasi pada server uji coba, kita perlu mengetahui IPnya. di sini sudah diketahui IP server target adalah 192.168.145.132.
+* Setelah itu masukkan syntax berikut pada terminal
+
+```
+~# medusa -u ggg.txt -h 192.168.145.132 -M ssh
+```
+
+* Setelah itu terminal akan menampilkan hasil berikut:
+
+```
+Medusa v2.0 [http//foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+ACCOUNT CHECK: [ssh] Host: 192.168.145.132 (1 of 1, 0 complete) User: ggg (1 of 1, 0 complete) Password: ggg (1 of 3 complete)
+ACCOUNT FOUND: [ssh] Host: 192.168.145.132 User: ggg Password: ggg [SUCCESS]
+```
+
+## sshGUARD Sebagai Alternatif Dari fail2ban
+
+### Konfigurasi sshGUARD
+
+Masukkan syntax berikut dalam terminal pada Ubuntu Server:
+
+```
+~$ sudo apt-get install sshguard
+```
+
+### Uji Countermeasure sshGUARD Menggunakan Penetrasi Medusa
+
+* Aktifkan sshguard dengan memasukkan command berikut pada terminal Ubuntu Server
+
+```
+~$ sudo systemctl start sshguard.service
+```
+
+* Masukkan command berikut pada terminal Kali Linux untuk melakukan penetrasi menggunakan Medusa
+
+```
+~# medusa -u ggg.txt -h 192.168.145.132 -M ssh
+```
+
+* Terminal akan menampilkan hasil seperti berikut:
+
+```
+Medusa v2.0 [http//foofus.net] (C) JoMo-Kun / Foofus Networks <jmk@foofus.net>
+
+NOTICE: ssh.mod: failed to connect, port 22 was not open on 192.168.145.132
+```
+
 ## Kesimpulan dan Saran
 
-Dari uji penetrasi yang pertama dan kedua, dapat ditarik kesimpulan bahwa kita perlu menambah software untuk SSH brute force countermeasure salah satunya adalah fail2ban. Selain itu kita juga mengkonfigurasi SSH agar tidak default. Supaya susah untuk diserang.
+Dari uji penetrasi yang pertama dan kedua, baik menggunakan Ncrack dan fail2ban maupun Medusa dan sshGuard, kami menarik kesimpulan bahwa software SSH brute force countermeasure bisa menghentikan adanya SSH brute force attack. Selain itu kita juga mengkonfigurasi SSH dan mengubah port default sehingga menyulitkan proses SSH brute force attack.
