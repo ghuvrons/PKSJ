@@ -111,8 +111,14 @@ Ncrack finished.
 
 ### Konfigurasi openSSH
 
-* -
-* -
+* Untuk konfigurasi openSSH, bisa mengedit file konfigurasi di /etc/ssh/sshd_config
+
+```
+~$ sudo nano /etc/ssh/sshd_config
+```
+
+* Di file ini bisa untuk merubah port ssh yang biasanya 22 menjadi berapapun.
+* tidak hanya port juga masih banyak configurasi yang lainnya.
 
 ### Uji penetrasi menggunakan Ncrack
 
