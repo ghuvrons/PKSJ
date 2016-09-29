@@ -37,23 +37,60 @@ Ncrack adalah alat otentikasi jaringan kecepatan tinggi. Dibuat untuk membantu p
 
 ### Instalasi Ubuntu Server di vmware
 
-* 
-* 
+* Pertama download Ubuntu Server di http://www.ubuntu.com/download/server
+* Buka vmware kemudian ctrl+N untuk membuat virtual mechine baru. pilih image ubuntu server yang baru di download.
+* ikuti perintah-perintah yang ada di vmware sampai instalisasi selesai
 
 ### Instalasi kali linux di vmware
 
-* 
-* 
+* Pertama download image iso kali linux di http://cdimage.kali.org/kali-2016.2/
+* Buka vmware kemudian ctrl+N untuk membuat virtual mechine baru. pilih image ubuntu server yang baru di download.
+* ikuti perintah-perintah yang ada di vmware sampai instalisasi selesai
 
 ### Instalasi software openSSH
 
-* -
-* -
+* Untuk mengintall openSSH di OS Ubuntu server ketik 
+
+```
+~$ sudo apt-get update && apt-get install openssh-server
+```
+
+* Masukkan password server. kemudian klik enter.
+* Tunggu sampai proses download dan instalisasi selesai
+* Kemudian jalankan *openssh-server*
+
+```
+~$ sudo systemctl start sshd.service
+```
+
 
 ### Uji penetrasi menggunakan Ncrack
 
-* -
-* -
+* Di OS kali linux sudah tersedia tool ncrack untuk memenetrasi ssh server
+* syntax ncrack adalah
+
+```
+~$ ncrack [Option] (target and service specification)
+```
+
+* Untuk melakukan uji penetrasi pada server uji coba, kita perlu mengetahui IPnya. di sini sudah diketahui IP server target adalah 192.168.145.132.
+
+```
+~$ ncrack -p 22 -user ggg -P password-lib-list.txt 192.168.145.132
+
+Starting Ncrack 0.4ALPHA ( http://ncrack.org ) at 2016-07-01 23:21 WIB
+
+Discovered credentials for ssh on 192.168.145.132 22/tcp:
+192.168.145.132 22/tcp ss: 'ggg' 'ggg'
+
+Ncrack done:1 service scanner in 24.14 seconds.
+
+Ncrack finished.
+```
+
+* dari penetrasi di atas diketahui bahwa server dengan nama 'ggg' memiliki password 'ggg'
+
+
 
 ## Uji Penetrasi 2
 
