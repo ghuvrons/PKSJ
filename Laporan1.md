@@ -27,7 +27,7 @@ Ubuntu Server adalah system operasi turunan dari Linux Ubuntu yang di desain khu
 
 ### Software openSSH
 
-Software openSSH merupakan ...
+SSH sebagai tool untuk melakukan konektivitas pada jaringan. Jika anda menggunakan telnet, rlogin, dan ftp mungkin tanpa anda sadari bahwa password yang terkirim tanpa melalui enkripsi. Sedangkan dengan menggunakan OpenSSH melakukan enkripsi kepada semua trafik (termasuk password) secara efektif untuk menghindari hal-hal yang tidak diinginkan. Secara tambahan, OpenSSH memiliki tunneling yang aman dan beberapa metode autentikasi, dan juga mendukung semua versi protokol SSH.
 
 ### Software Ncrack
 
