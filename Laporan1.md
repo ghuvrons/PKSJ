@@ -22,7 +22,8 @@ Banyak sekali di era yang serba teknologi ini kejahatan semakin ramai. Jaman sek
 
 ### OS Ubuntu Server
 
-OS Ubuntu Server adalah ...
+Ubuntu Server adalah system operasi turunan dari Linux Ubuntu yang di desain khusus dengan kernel yang telah dikustomisasi untuk bekerja sebagai system operasi server. Kernel Linux Ubuntu Server di desain khusus untuk bisa bekerja dengan lebih dari satu proses (multiprocessor) dengan dukungan NUMA pada 100Hz internal timer frequency dan menggunakan pennjadwalan deadline I/O.
+
 
 ### Software openSSH
 
