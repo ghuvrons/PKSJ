@@ -25,8 +25,19 @@ Cuckoo Sandbox adalah suatu applikasi untuk mempermudah kita melakukan analisa s
 
 ## Instalasi Cuckoo Sandbox
 
+### Install Virtual Box
 
-###
+### Install Python, PIP, GIT, dan beberapa library yang dibutuhkan
+
+### Install ssdeep
+
+### Install pydeep
+
+### Install yara
+
+### Install tcpdump
+
+### Install Cuckoo
 
 ## Kesimpulan dan Saran
 
