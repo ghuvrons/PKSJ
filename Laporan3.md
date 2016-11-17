@@ -18,7 +18,9 @@
 
 ## Dasar Teori
 
-### 
+### Cuckoo Sandbox
+
+Cuckoo Sandbox adalah suatu applikasi untuk mempermudah kita melakukan analisa suatu malware. Aplikasi ini mencatat suatu perubahan-perubahan yang dilakukan oleh suatu malware sehingga kita bisa menarik sebuah kesimpulan terhadap malware tersebut.
 
 
 ## Uji Penetrasi
