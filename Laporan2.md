@@ -18,6 +18,14 @@ SQL Injection adalah teknik penetrasi kode yang digunakan untuk melakukan penyer
 * Mengetahui cara perlindungan dan pencegahan SQL Injection
 
 ## Dasar Teori
+OS yang digunakan
+
+WordPress adalah alat blogging gratis dan open source dan sistem manajemen konten (CMS) berbasis PHP dan MySQL, yang berjalan pada layanan web hosting. Fitur termasuk plug-in arsitektur dan sistem template. WordPress digunakan oleh lebih dari 18,9 % dari 10 juta website pada Agustus 2013 WordPress adalah sistem blogging yang paling populer digunakan di Web, pada lebih dari 60 juta situs.
+
+SQLMap adalah tool open source yang di jalankan menggunakan command dan support untuk data base MySQL, Oracle, PostgreSQL, Microsoft SQL Server, Microsoft Access, IBM DB2, SQLite, Firebird, Sybase and SAP MaxDB.
+SQLMAP adalah penetrasi open source pengujian alat yang mengotomatisasi proses mendeteksi dan mengeksploitasi kelemahan SQL injection dan mengambil alih server database.
+
+
 
 ### 
 
