@@ -72,7 +72,49 @@ Tambahkan user ggg pada list user yang dapat mengakses perintah sudo dengan meng
 ```
 sudo visudo
 ```
+masuk ke file /etc/sudoers.tmp dengan mengetikkan perintah ini
+```
+nano /etc/sudoers.tmp
+```
+setelah masuk ke file /etc/sudoers.tmp ketikkan `kippo ALL=(ALL:ALL) ALL` dibawah `root    ALL=(ALL:ALL) ALL`
+Untuk menyelesaikan settingan Kippo lakukan perintah di bawah ini
+```
+touch /etc/authbind/byport/22
+```
+```
+chown kippo:kippo /etc/authbind/byport/22
+```
+```
+chmod 777 /etc/authbind/byport/22
+```
+Selanjutnya lakukan perintah ini untuk mendowload Kippo versi terbaru
+```
+git clone https://github.com/desaster/kippo.git
+```
+Copy dan edit file konfigurasi Kippo dari port 2222 menjadi port 22
+```
+cp kippo.cfg.dist.kippo.cfg
+```
+```
+nano kippo.cfg
+```
+Kemudian edit file start.sh dengan mengetikkan:
+```
+nano start.sh
+```
+ubah line ini
+`twistd -y kippo.tac -l log/kippo.log --pidfile kippo.pid`
+menjadi
+`authbind --deep twistd -y kippo.tac -l log/kippo.log --pidfile kippo.pid`
 
+nyalakan honeypot
+```
+./start.sh
+```
+untuk mengecek status kippo telah listening ketikken perintah berikut
+```
+sudo netstat -antp_
+```
 ## Analisis Malware
 
 ## Kesimpulan dan Saran
