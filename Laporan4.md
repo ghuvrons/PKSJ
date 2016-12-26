@@ -34,9 +34,44 @@ Brute Force Attack adalah metode untuk meretas password (password cracking) deng
 
 Honeypot adalah suatu sistem palsu yang sengaja dibuat untuk menjebak attacker menyerang sistem yang aslinya. Apabila attacker berhasil masuk ke honeypot, sistem yang aslinya tetap aman tak terpengaruh sedikit pun.
 
-### Cuckoo Sandbox
+### Persiapan Uji Penetrasi
 
-### Instalasi Cuckoo Sandbox
+Instalasi Ubuntu Server
+
+### Instalasi Kippo Honeypot pada Ubuntu Server
+
+Pertama lakukan update pada Ubuntu Server
+```
+apt-get update
+```
+Kemudian ganti port (defaultnya port 22) dengan port 2222 pada file sshd_config, caranya ketikkan perintah ini:
+```
+nano /etc/ssh/sshd_config
+```
+lalu edit port yang tertera di sana dengan port 2222. Jika sudah lakukan perintah restart
+```
+/etc/init.d/ssh restart
+```
+Selanjutnya, download semua kebutuhan untuk Kippo dengan mengetikkan perintah:
+```
+apt-get install python-dev openssl python-openssl python-pyasn1 python-twisted
+```
+Sebelum melangkah lebih lanjut, install git pada Ubuntu Server terlebih dahulu
+```
+apt-get install git
+```
+Ketikkan perintah ini untuk menjalankan honeypot pada port 22
+```
+apt-get install authbind
+```
+Sebelum memulai Kippo, tambahkan user Kippo pada Ubuntu server dengan mengetikkan perintah di bawah ini
+```
+adduser ggg
+```
+Tambahkan user ggg pada list user yang dapat mengakses perintah sudo dengan mengetikkan perintah ini
+```
+sudo visudo
+```
 
 ## Analisis Malware
 
